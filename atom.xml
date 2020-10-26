@@ -6,7 +6,7 @@
   <link href="https://cpu-mr-lv.github.io/jie.io/atom.xml" rel="self"/>
   
   <link href="https://cpu-mr-lv.github.io/jie.io/"/>
-  <updated>2020-10-26T14:06:56.294Z</updated>
+  <updated>2020-10-26T14:28:52.382Z</updated>
   <id>https://cpu-mr-lv.github.io/jie.io/</id>
   
   <author>
@@ -21,8 +21,15 @@
     <link href="https://cpu-mr-lv.github.io/jie.io/2020/10/26/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%87%AA%E9%80%82%E5%BA%94/"/>
     <id>https://cpu-mr-lv.github.io/jie.io/2020/10/26/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%87%AA%E9%80%82%E5%BA%94/</id>
     <published>2020-10-26T14:06:56.000Z</published>
-    <updated>2020-10-26T14:06:56.294Z</updated>
+    <updated>2020-10-26T14:28:52.382Z</updated>
     
+    <content type="html"><![CDATA[<h2 id="移动端自适应"><a href="#移动端自适应" class="headerlink" title="移动端自适应"></a>移动端自适应</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width,initial-scale&#x3D;1.0,maximum-scale&#x3D;1.0,minimum-scale&#x3D;1.0,user-scalable&#x3D;no&quot;&gt;</span><br></pre></td></tr></table></figure><p>width=device-width width为设置layout viewport 的宽度，为一个正整数，”width-device”表示宽度是设备屏幕的宽度<br>initial-scale=1.0 initial-scale为设置页面的初始缩放值，可以是一个带小数的数字，1.0就是占网页的100%<br>minimum-scale=1.0 表示最小的缩放比例<br>maximum-scale=1.0 表示最大的缩放比例<br>user-scalable=no 表示用户是否可以调整缩放比例，值为”no”或”yes”</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;移动端自适应&quot;&gt;&lt;a href=&quot;#移动端自适应&quot; class=&quot;headerlink&quot; title=&quot;移动端自适应&quot;&gt;&lt;/a&gt;移动端自适应&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gut</summary>
+      
     
     
     
