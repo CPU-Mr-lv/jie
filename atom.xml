@@ -6,7 +6,7 @@
   <link href="https://cpu-mr-lv.github.io/jie.io/atom.xml" rel="self"/>
   
   <link href="https://cpu-mr-lv.github.io/jie.io/"/>
-  <updated>2020-10-28T13:41:48.174Z</updated>
+  <updated>2020-10-28T14:34:56.305Z</updated>
   <id>https://cpu-mr-lv.github.io/jie.io/</id>
   
   <author>
@@ -15,6 +15,66 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>cookies和session的区别</title>
+    <link href="https://cpu-mr-lv.github.io/jie.io/2020/10/28/cookie/"/>
+    <id>https://cpu-mr-lv.github.io/jie.io/2020/10/28/cookie/</id>
+    <published>2020-10-28T14:34:14.000Z</published>
+    <updated>2020-10-28T14:34:56.305Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\jie.io\assets\css\APlayer.min.css"><script src="\jie.io\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>1、数据bai存放du位置不同：</p><p>cookie数据存放在客户的zhi浏览器上，session数据放在服务器上。</p><p>2、安全程度不dao同：</p><p>cookie不是很安全，别人可以分析存放在本地的COOKIE并进行COOKIE欺骗,考虑到安全应当使用session。</p><p>3、性能使用程度不同：</p><p>session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能,考虑到减轻服务器性能方面，应当使用cookie。</p><p>4、数据存储大小不同：</p><p>单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie，而session则存储与服务端，浏览器对其没有限制。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\jie.io\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\jie.io\assets\js\APlay</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Vue Router</title>
+    <link href="https://cpu-mr-lv.github.io/jie.io/2020/10/28/Vue-Router/"/>
+    <id>https://cpu-mr-lv.github.io/jie.io/2020/10/28/Vue-Router/</id>
+    <published>2020-10-28T14:30:26.000Z</published>
+    <updated>2020-10-28T14:33:26.770Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\jie.io\assets\css\APlayer.min.css"><script src="\jie.io\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>##vue router是什么？</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Vue Router 是 Vue.js 官方的路由管理器。实际上就是可以理解为指向，即在页面上点击一个按钮需要跳转到对应的页面，这就是路由跳转；</span><br></pre></td></tr></table></figure><h2 id="vue-router的安装"><a href="#vue-router的安装" class="headerlink" title="vue router的安装"></a>vue router的安装</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install vue-cli</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\jie.io\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\jie.io\assets\js\APlay</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>vue</title>
+    <link href="https://cpu-mr-lv.github.io/jie.io/2020/10/28/vue/"/>
+    <id>https://cpu-mr-lv.github.io/jie.io/2020/10/28/vue/</id>
+    <published>2020-10-28T14:25:58.000Z</published>
+    <updated>2020-10-28T14:29:16.829Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\jie.io\assets\css\APlayer.min.css"><script src="\jie.io\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>##什么是vue？</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Vue 是一套用于构建用户界面的渐进式框架，项目如果需要更换框架，则需要重新架构整个项目</span><br></pre></td></tr></table></figure><p>##Vue作为前端框架的特点是什么？</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.构建用户界面，只需要关系view层</span><br><span class="line">2.简单易学，轻量快速</span><br><span class="line">3.渐进式框架</span><br></pre></td></tr></table></figure><p>##vue的两大核心是什么？</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.响应式的数据绑定：当数据发生改变，视图可以自动更新，可以不用关心dom操作，而专心数据操作</span><br><span class="line">2.可组合的视图组件：把视图按照功能切分成若干基本单元，组件可以一级一级组合整个应用形成倒置组件树，可维护，可重用，可测试</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\jie.io\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\jie.io\assets\js\APlay</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>promise</title>
