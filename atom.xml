@@ -6,7 +6,7 @@
   <link href="https://cpu-mr-lv.github.io/jie.io/atom.xml" rel="self"/>
   
   <link href="https://cpu-mr-lv.github.io/jie.io/"/>
-  <updated>2020-10-28T13:23:02.925Z</updated>
+  <updated>2020-10-28T13:41:48.174Z</updated>
   <id>https://cpu-mr-lv.github.io/jie.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>promise</title>
+    <link href="https://cpu-mr-lv.github.io/jie.io/2020/10/28/promise/"/>
+    <id>https://cpu-mr-lv.github.io/jie.io/2020/10/28/promise/</id>
+    <published>2020-10-28T13:35:53.000Z</published>
+    <updated>2020-10-28T13:41:48.174Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\jie.io\assets\css\APlayer.min.css"><script src="\jie.io\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>##promise是什么？</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1、主要用于异步计算</span><br><span class="line">2、可以将异步操作队列化，按照期望的顺序执行，返回符合预期的结果</span><br><span class="line">3、可以在对象之间传递和操作promise，帮助我们处理队列</span><br></pre></td></tr></table></figure><p>##promise</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">promise是一个对象，对象和函数的区别就是对象可以保存状态，函数不可以（闭包除外）</span><br><span class="line">并未剥夺函数return的能力，因此无需层层传递callback，进行回调获取数据</span><br><span class="line">代码风格，容易理解，便于维护</span><br><span class="line">多个异步等待合并便于解决</span><br></pre></td></tr></table></figure><p>##promise详解</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">resolve作用是，将Promise对象的状态从“未完成”变为“成功”（即从 pending 变为 resolved），在异步操作成功时调用，并将异步操作的结果，作为参数传递出去；</span><br><span class="line">reject作用是，将Promise对象的状态从“未完成”变为“失败”（即从 pending 变为 rejected），在异步操作失败时调用，并将异步操作报出的错误，作为参数传递出去。</span><br><span class="line">promise有三个状态：</span><br><span class="line">1、pending[待定]初始状态</span><br><span class="line">2、fulfilled[实现]操作成功</span><br><span class="line">3、rejected[被否决]操作失败</span><br><span class="line">当promise状态发生改变，就会触发then()里的响应函数处理后续步骤；</span><br><span class="line">promise状态一经改变，不会再变。</span><br><span class="line">Promise对象的状态改变，只有两种可能：</span><br><span class="line">从pending变为fulfilled</span><br><span class="line">从pending变为rejected。</span><br><span class="line">这两种情况只要发生，状态就凝固了，不会再变了。</span><br></pre></td></tr></table></figure><p>##示例一</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">new Promise(resolve &#x3D;&gt; &#123;</span><br><span class="line">  setTimeout(() &#x3D;&gt; &#123;</span><br><span class="line">    resolve(&#39;hello&#39;)</span><br><span class="line">  &#125;, 2000)</span><br><span class="line">&#125;).then(res &#x3D;&gt; &#123;</span><br><span class="line">  console.log(res)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><p>##分两次，顺序执行</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">new Promise(resolve &#x3D;&gt; &#123;</span><br><span class="line">    setTimeout(() &#x3D;&gt; &#123;</span><br><span class="line">      resolve(&#39;hello&#39;)</span><br><span class="line">    &#125;, 2000)</span><br><span class="line">  &#125;).then(val &#x3D;&gt; &#123;</span><br><span class="line">    console.log(val) &#x2F;&#x2F;  参数val &#x3D; &#39;hello&#39;</span><br><span class="line">    return new Promise(resolve &#x3D;&gt; &#123;</span><br><span class="line">      setTimeout(() &#x3D;&gt; &#123;</span><br><span class="line">        resolve(&#39;world&#39;)</span><br><span class="line">      &#125;, 2000)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;).then(val &#x3D;&gt; &#123;</span><br><span class="line">    console.log(val) &#x2F;&#x2F; 参数val &#x3D; &#39;world&#39;</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure><p>##promise完成后then()</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">let pro &#x3D; new Promise(resolve &#x3D;&gt; &#123;</span><br><span class="line">   setTimeout(() &#x3D;&gt; &#123;</span><br><span class="line">     resolve(&#39;hello world&#39;)</span><br><span class="line">   &#125;, 2000)</span><br><span class="line"> &#125;)</span><br><span class="line"> setTimeout(() &#x3D;&gt; &#123;</span><br><span class="line">   pro.then(value &#x3D;&gt; &#123;</span><br><span class="line">   console.log(value) &#x2F;&#x2F; hello world</span><br><span class="line"> &#125;)</span><br><span class="line"> &#125;, 2000)</span><br></pre></td></tr></table></figure><p> ##.then()</p><pre><code>.then()1、接收两个函数作为参数，分别代表fulfilled（成功）和rejected（失败）2、.then()返回一个新的Promise实例，所以它可以链式调用3、当前面的Promise状态改变时，.then()根据其最终状态，选择特定的状态响应函数执行4、状态响应函数可以返回新的promise，或其他值，不返回值也可以我们可以认为它返回了一个null；5、如果返回新的promise，那么下一级.then()会在新的promise状态改变之后执行6、如果返回其他任何值，则会立即执行下一级.then()</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\jie.io\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\jie.io\assets\js\APlay</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>前端面试题1——axios</title>
